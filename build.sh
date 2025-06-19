@@ -11,7 +11,7 @@ echo "Installing .NET 6.0..."
 apt install -y aspnetcore-runtime-6.0
 apt install -y dotnet-sdk-6.0
 
-# Install git and unzip
+# Install git an
 echo "Installing git"
 apt install -y git
 

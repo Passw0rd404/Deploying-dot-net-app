@@ -140,3 +140,7 @@ ls -la /home/ubuntu/srv-02/publish/srv02.dll
 
 ---
 ⭐ **Works out-of-the-box** • **Ubuntu 20/22 only** • **No configuration needed**
+
+## 🙏 Acknowledgements
+
+- 📚 [aws-DevOps-90 course](https://cloudnativebasecamp.com/courses/aws-devops-90/) – for helpful guidance 

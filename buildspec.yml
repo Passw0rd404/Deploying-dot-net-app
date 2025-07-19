@@ -2,7 +2,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      dotnet: 8.0
+      dotnet: 8.0.303
   build:
     commands:
       - dotnet publish -c Release --self-contained=false --runtime linux-x64 -o bin/Release/net8.0/linux-x64/

@@ -5,7 +5,9 @@ phases:
       dotnet: 8.0.303
   build:
     commands:
-      - dotnet publish -c Release --self-contained=false --runtime linux-x64 -o bin/Release/net8.0/linux-x64/
+      - dotnet restore
+      - dotnet build -c Release
+      - dotnet publish -c Release --self-contained=false --runtime linux-x64 -o ./publish/
 artifacts:
   files:
     - bin/Release/netcoreapp6/linux-x64/**/*

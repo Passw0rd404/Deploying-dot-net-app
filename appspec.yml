@@ -3,16 +3,30 @@ os: linux
 files:
   - source: /
     destination: /home/ubuntu/srv02
+    overwrite: yes
+permissions:
+  - object: /home/ubuntu/srv02
+    owner: ubuntu
+    group: ubuntu
+    mode: 755
+    type:
+      - directory
+  - object: /home/ubuntu/srv02
+    owner: ubuntu
+    group: ubuntu  
+    mode: 644
+    type:
+      - file
 hooks:
   BeforeInstall:
     - location: before_install.sh
-      timeout: 30
+      timeout: 45
   AfterInstall:
     - location: after_install.sh
-      timeout: 30
+      timeout: 45
   ApplicationStart:
     - location: start.sh
-      timeout: 30
+      timeout: 60
   ApplicationStop:
     - location: stop.sh
-      timeout: 30
+      timeout: 45

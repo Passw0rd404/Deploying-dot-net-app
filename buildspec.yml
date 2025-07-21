@@ -5,9 +5,9 @@ phases:
       dotnet: 8.0.303
   build:
     commands:
-      -sudo dotnet restore
-      -sudo dotnet build -c Release
-      -sudo dotnet publish -c Release --self-contained=false --runtime linux-x64 -o ./bin/Release/net8.0/linux-x64/publish/
+      - sudo dotnet restore
+      - sudo dotnet build -c Release
+      - sudo dotnet publish -c Release --self-contained=false --runtime linux-x64 -o ./bin/Release/net8.0/linux-x64/publish/
 artifacts:
   files:
     - publish/**

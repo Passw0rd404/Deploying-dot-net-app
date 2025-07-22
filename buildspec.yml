@@ -3,7 +3,7 @@ phases:
   install:
     runtime-versions:
       dotnet: 8.0.303
-  pre-build:
+  pre_build:
     commands:
       - sudo dotnet restore
   build:

@@ -3,14 +3,16 @@ phases:
   install:
     runtime-versions:
       dotnet: 8.0.303
-  build:
+  pre-build:
     commands:
       - sudo dotnet restore
+  build:
+    commands:
       - sudo dotnet build -c Release
       - sudo dotnet publish -c Release --self-contained=false --runtime linux-x64 -o ./bin/Release/net8.0/linux-x64/publish/
 artifacts:
   files:
-    - publish/**
+    - publish/**/*
     - appspec.yml
     - scripts/*
   discard-paths: yes
